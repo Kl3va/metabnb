@@ -10,7 +10,7 @@ const Navbar = ({ navbar }) => {
   return (
     <aside className={styles.navbar}>
       <nav className={styles.navigation}>
-        <img src={navbar.logo} alt='logo' />
+        <img src={navbar.logo} alt='logo' className={styles.logo} />
         <ul>
           {navbar.navLinks.map((links, index) => {
             return (

@@ -18,11 +18,12 @@ $font-weight-smaller: 400;
 //Breakpoints
 $breakpoint-small: 31.25em; //500px
 $breakpoint-mid: 43.75em; //700px
+$breakpoint-medium: 50em; //800px
 $breakpoint-large: 62.5em; //1000px
 $breakpoint-larger: 68.75em; //1100px
 
 //Mixins
 @mixin widthStyle {
-  width: min(90%, 76rem);
+  width: min(90%, 76.31rem);
   margin-inline: auto;
 }
