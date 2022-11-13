@@ -1,0 +1,103 @@
+@use 'GlobalStyles/variable.scss' as *;
+
+//NAVBAR
+.navbar {
+  margin-top: 2.68rem;
+}
+
+.navigation {
+  display: flex;
+  margin-inline: 6.25rem;
+  justify-content: space-between;
+  align-items: center;
+
+  & > ul {
+    display: flex;
+    gap: 3vw;
+
+    & > li {
+      list-style-type: none;
+    }
+  }
+}
+
+.navlink {
+  display: block;
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: inherit;
+  transition: all ease-out 0.2s;
+
+  @media only screen and (max-width: $breakpoint-larger) {
+    display: none;
+  }
+
+  &:hover {
+    color: $color-dark;
+  }
+}
+
+.btn {
+  background-color: $color-dark;
+  color: $color-primary;
+  border-radius: 0.62rem;
+  padding: 0.93rem 1.68rem;
+  border: none;
+  transition: all ease-in 0.2s;
+
+  @media only screen and (max-width: $breakpoint-larger) {
+    display: none;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.menu {
+  display: none;
+
+  @media only screen and (max-width: $breakpoint-larger) {
+    display: block;
+  }
+}
+
+//FOOTER SECTION
+
+.footerWrapper {
+  background-color: $black;
+  padding-block: 3.6rem 2.3rem;
+}
+
+.footer {
+  color: $color-primary;
+  @include widthStyle;
+
+  &__socialIcons {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__links {
+    & > *:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      transition: all ease-in 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-dark;
+      }
+    }
+  }
+
+  &__icons > *:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.copyright {
+  display: flex;
+}

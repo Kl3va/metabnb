@@ -2,29 +2,27 @@
 $color-primary: #ffffff;
 
 //Secondary Colors
-$light-grey: #eaecf0;
-$dark-grey: #d0d5dd;
-$darker-grey: #98a2b3;
-$light-black: #101828;
-$lighter-grey: #667085;
-$greyish-black: #344054;
-$color-grey-light: #475467;
-$blue: #1570ef;
-$light-blue: #84caff;
-$lighter-blue: #175cd3;
-$error: #f89687;
-$shadow: #d1e9ff;
+$text-black: #434343;
+$color-dark: #a02279;
+$color-darker: #1d1d1e;
+$black: #000000;
 
 //Font-family
-$font-secondary: 'Inter', sans-serif;
+$font-secondary: 'Red Rose', sans-serif;
 
 //Font-weight
 $font-weight-large: 700;
-$font-weight-medium: 600;
 $font-weight-small: 500;
 $font-weight-smaller: 400;
 
 //Breakpoints
-$breakpoint-small: 500px;
+$breakpoint-small: 31.25em; //500px
 $breakpoint-mid: 43.75em; //700px
 $breakpoint-large: 62.5em; //1000px
+$breakpoint-larger: 68.75em; //1100px
+
+//Mixins
+@mixin widthStyle {
+  width: min(90%, 76rem);
+  margin-inline: auto;
+}

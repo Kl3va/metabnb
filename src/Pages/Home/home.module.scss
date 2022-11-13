@@ -1,0 +1,148 @@
+@use 'GlobalStyles/variable.scss' as *;
+
+//MAIN SECTION OF THE HOME PAGE
+.main {
+  margin-top: 4.8rem;
+}
+
+.section {
+  &__hero {
+    margin-bottom: 3.5rem;
+  }
+
+  &__partners {
+    background-color: $color-dark;
+    margin-bottom: 3.6rem;
+  }
+
+  &__callToAction {
+    background-color: $color-dark;
+    padding-block: 6.25rem;
+  }
+}
+
+//HERO SECTION
+.hero {
+  @include widthStyle;
+}
+
+.heroDescription {
+  margin-bottom: 2rem;
+}
+
+.mainHeading {
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 1.2rem;
+
+  span {
+    color: $color-dark;
+  }
+}
+
+.heroText {
+  margin-bottom: 1.3rem;
+}
+
+input[type='text'] {
+  padding: 0.93rem 1.12rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+  border: 1px solid $color-darker;
+  margin-bottom: 0.5rem;
+}
+
+.btnInput {
+  padding: 1rem 4rem;
+  background-color: $color-dark;
+  color: $color-primary;
+  border: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+//PARTNERS
+.partners {
+  @include widthStyle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 1rem;
+}
+
+//FEATURES
+.placesWrapper {
+  @include widthStyle;
+}
+
+.places {
+  padding: 1rem;
+  border: 1px solid rgba($color-darker, 0.5);
+  border-radius: 0.93rem;
+  margin-bottom: 1.5rem;
+}
+
+.places__heading {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 2.6rem;
+  color: $black;
+}
+
+.places__description {
+  display: grid;
+  grid-template-columns: 0.6fr 1fr;
+  grid-template-rows: auto;
+  grid-row-gap: 0.62rem;
+  margin-bottom: 0.5rem;
+
+  p {
+    font-size: 0.75rem;
+  }
+}
+
+.value {
+  font-weight: $font-weight-large;
+  justify-self: end;
+}
+
+.available {
+  justify-self: end;
+}
+
+.featureImg {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.ratings {
+  display: flex;
+  gap: 3px;
+}
+
+//MORE INFO
+.moreInfoWrapper {
+  @include widthStyle;
+}
+
+.moreInfo {
+  color: $color-primary;
+  margin-bottom: 2rem;
+
+  a {
+    text-decoration: none;
+    color: $color-dark;
+    padding: 0.87rem 2rem;
+    border-radius: 0.5rem;
+    background-color: $color-primary;
+  }
+}
+
+.moreInfo__heading {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.moreInfo__text {
+  margin-bottom: 3rem;
+}
