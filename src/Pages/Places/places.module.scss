@@ -1,0 +1,62 @@
+@use 'GlobalStyles/variable.scss' as *;
+
+.section__filter {
+  margin-block: 4rem;
+
+  @media only screen and (min-width: $breakpoint-medium) {
+    margin-block: 7rem 4rem;
+  }
+}
+
+.filter {
+  @include widthStyle;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: block;
+
+  @media only screen and (min-width: $breakpoint-unique) {
+    display: none;
+  }
+}
+
+.menubar {
+  width: 2rem;
+}
+
+.filter__btns {
+  display: none;
+
+  @media only screen and (min-width: $breakpoint-unique) {
+    display: flex;
+    flex: 0.9;
+    justify-content: space-between;
+  }
+}
+
+.btn {
+  transition: all ease-in 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-dark;
+  }
+}
+
+.setting__wrapper {
+  display: flex;
+  padding: 0.87rem 0.81rem;
+  border: 1px solid $color-border;
+  gap: 3rem;
+  transition: all ease-out 0.2s;
+  border-radius: 0.5rem;
+
+  &:hover {
+    //border: 2px solid $color-dark;
+    outline: 2px solid $color-dark;
+  }
+}

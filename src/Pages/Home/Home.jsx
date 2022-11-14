@@ -2,6 +2,7 @@ import React from 'react'
 //Styling
 import styles from 'Pages/Home/home.module.scss'
 import Button from 'Components/Button'
+import Cards from 'Components/Cards'
 
 const Home = ({
   heroText,
@@ -56,7 +57,7 @@ const Home = ({
           <div className={styles.buildings}>
             {featuresImgs.slice(8).map((feature, index) => {
               return (
-                <div className={styles.places} key={index}>
+                /* <div className={styles.places} key={index}>
                   <img
                     src={feature}
                     alt={imgAlt}
@@ -73,7 +74,17 @@ const Home = ({
                       return <img src={rate} alt='rating' key={index} />
                     })}
                   </div>
-                </div>
+                </div>*/
+                <Cards
+                  index={index}
+                  feature={feature}
+                  imgAlt={imgAlt}
+                  buildingName={buildingName}
+                  value={value}
+                  distance={distance}
+                  availability={availability}
+                  rating={rating}
+                />
               )
             })}
           </div>
