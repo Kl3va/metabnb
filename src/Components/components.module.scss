@@ -65,6 +65,7 @@
 
 .menu {
   display: none;
+  width: 1.12rem;
 
   @media only screen and (max-width: $breakpoint-larger) {
     display: block;
@@ -234,5 +235,54 @@
 
   p {
     font-weight: $font-weight-large;
+  }
+}
+
+//SIDEBAR
+.sidebar {
+  position: fixed;
+  //inset: 0;
+  //top: 5rem;
+  right: 0;
+  border-radius: 0.5rem;
+  z-index: 7;
+  //min-height: 30rem;
+  padding: 1rem 1.5rem;
+  //display: flex;
+  //flex-direction: column;
+  transition: all ease-in 0.2s;
+  transform: translate(100%);
+  background-color: $color-background;
+
+  @media only screen and (min-width: $breakpoint-larger) {
+    display: none;
+  }
+
+  &__link {
+    list-style-type: none;
+    margin-bottom: 0.5rem;
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: $color-darker;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.navbtn {
+  background-color: $color-dark;
+  color: $color-primary;
+  border-radius: 0.62rem;
+  padding: 0.53rem 0.88rem;
+  border: none;
+  transition: all ease-in 0.2s;
+
+  &:hover {
+    opacity: 0.8;
   }
 }

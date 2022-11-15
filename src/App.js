@@ -10,6 +10,7 @@ import Footer from 'Components/Footer'
 import Places from 'Pages/Places/Places'
 import Background from 'Components/Background'
 import ConnectWallet from 'Components/ConnectWallet'
+import Sidebar from 'Components/Sidebar'
 
 //Props Data
 import { reuseData } from 'Components/componentData'
@@ -22,7 +23,8 @@ function App() {
     <Router>
       <Navbar {...reuseData} />
       <Background />
-      {<ConnectWallet {...connectData} />}
+      <Sidebar />
+      <ConnectWallet {...connectData} />
       <Routes>
         <Route path='/places' element={<Places {...placeToStay} />} />
         <Route path='/' element={<Home {...homeProps} />} />

@@ -8,7 +8,8 @@ import Button from 'Components/Button'
 import styles from 'Components/components.module.scss'
 
 const Navbar = ({ navbar }) => {
-  const { openPopUp } = useGlobalContext()
+  const { openPopUp, isSidebarOpen, openSidebar, closeSidebar } =
+    useGlobalContext()
 
   return (
     <aside className={styles.navbar}>
@@ -30,7 +31,27 @@ const Navbar = ({ navbar }) => {
           text={navbar.btnConnect}
           openPage={openPopUp}
         />
-        <img src={navbar.iconOpen} alt='open' className={styles.menu} />
+        {isSidebarOpen ? (
+          <img
+            src={navbar.iconClose}
+            alt='close'
+            className={styles.menu}
+            onClick={closeSidebar}
+          />
+        ) : (
+          <img
+            src={navbar.iconOpen}
+            alt='open'
+            className={styles.menu}
+            onClick={openSidebar}
+          />
+        )}
+        {/* <img
+          src={navbar.iconOpen}
+          alt='open'
+          className={styles.menu}
+          onClick={openSidebar}
+        />*/}
       </nav>
     </aside>
   )

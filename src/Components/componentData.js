@@ -10,12 +10,14 @@ import copyright from 'Assets/Vectorcopyright.png'
 
 //Icon for closing tab
 import hamburger from 'Assets/icon-hamburger.svg'
+import close from 'Assets/closeit-icon.png'
 
 export const reuseData = {
   btnMore: 'Learn more',
   navbar: {
     logo: logo,
     iconOpen: hamburger,
+    iconClose: close,
     btnConnect: 'Connect wallet',
     navLinks: [
       { link: '/', text: 'Home' },
