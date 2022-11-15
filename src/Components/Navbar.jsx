@@ -1,4 +1,5 @@
 import React from 'react'
+import { useGlobalContext } from 'context'
 
 //Button
 import Button from 'Components/Button'
@@ -7,6 +8,8 @@ import Button from 'Components/Button'
 import styles from 'Components/components.module.scss'
 
 const Navbar = ({ navbar }) => {
+  const { openPopUp } = useGlobalContext()
+
   return (
     <aside className={styles.navbar}>
       <nav className={styles.navigation}>
@@ -22,7 +25,11 @@ const Navbar = ({ navbar }) => {
             )
           })}
         </ul>
-        <Button btn={styles.btn} text={navbar.btnConnect} />
+        <Button
+          btn={styles.btn}
+          text={navbar.btnConnect}
+          openPage={openPopUp}
+        />
         <img src={navbar.iconOpen} alt='open' className={styles.menu} />
       </nav>
     </aside>

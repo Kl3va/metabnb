@@ -151,3 +151,88 @@
     grid-column-gap: 11vw;
   }
 }
+
+//BACKGROUND
+.navigation__background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(64, 64, 64, 0.3);
+  //-webkit-backdrop-filter: blur(0.5px);
+  backdrop-filter: blur(0.5px);
+  z-index: 5;
+  //visibility: hidden;
+  display: none;
+  transition: all ease-in 0.2s;
+}
+
+//CONNECT WALLET / POPUP
+.popup {
+  position: fixed;
+  background-color: $color-primary;
+  top: 50vh;
+  left: 50vw;
+  width: min(80%, 37.5rem);
+  z-index: 10;
+  display: none;
+  transition: all ease-in 0.2s;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+}
+
+.connect {
+  padding: 2rem 0;
+}
+
+.connectHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 2rem;
+}
+
+.connectMain {
+  padding: 2rem 2rem 0 2rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid $color-btn-border;
+
+  & > *:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+.btnLogo {
+  border: 1px solid $color-btn-border;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  transition: all ease-in 0.2s;
+
+  @media only screen and (min-width: $breakpoint-small) {
+    padding: 0.75rem 1.25rem;
+  }
+
+  &:hover {
+    background-color: $color-background;
+  }
+}
+
+.connectImg {
+  //width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+
+  @media only screen and (min-width: $breakpoint-small) {
+    gap: 1rem;
+  }
+
+  p {
+    font-weight: $font-weight-large;
+  }
+}

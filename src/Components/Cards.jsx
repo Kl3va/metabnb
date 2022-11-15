@@ -3,7 +3,7 @@ import styles from 'Pages/Home/home.module.scss'
 
 const Cards = (props) => {
   return (
-    <div className={styles.places} key={props.index}>
+    <div className={styles.places}>
       <img
         src={props.feature}
         alt={props.imgAlt}

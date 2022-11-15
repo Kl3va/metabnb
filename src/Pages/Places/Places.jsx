@@ -60,6 +60,7 @@ const Places = ({ btns, btnLocate, hamburgerIcon }) => {
                   distance={distance}
                   availability={availability}
                   rating={rating}
+                  key={index}
                 />
               )
             })}

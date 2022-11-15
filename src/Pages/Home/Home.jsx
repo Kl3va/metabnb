@@ -76,7 +76,6 @@ const Home = ({
                   </div>
                 </div>*/
                 <Cards
-                  index={index}
                   feature={feature}
                   imgAlt={imgAlt}
                   buildingName={buildingName}
@@ -84,6 +83,7 @@ const Home = ({
                   distance={distance}
                   availability={availability}
                   rating={rating}
+                  key={index}
                 />
               )
             })}
